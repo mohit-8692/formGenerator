@@ -31,12 +31,12 @@ const FormGenerator = ({ schema }: { schema: FormSchema }) => {
               ))}
             </select>
           ) : field.type === 'textarea' ? (
-            <textarea {...register(field.id)} placeholder={field.placeholder} className="border p-2 w-full" />
+            <textarea {...register(field.id)} placeholder={field.placeholder} className="border p-2 w-20" />
           ) : null}
           {errors[field.id] && <p className="text-red-500 text-sm">This field is required.</p>}
         </div>
       ))}
-      <button type="submit" className="bg-blue-500 text-white py-2 px-4 rounded">Submit</button>
+      <button type="submit" className="bg-black text-white py-2 px-4 rounded">Submit</button>
     </form>
   );
 };
